@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ titulo }}</title>
+        <link rel="stylesheet" href="../static/bootstrap">
+    </head>
+    <body>
+        <h1>{{ aa }}</h1>
+        <form action="/criar" method="post">
+            <div>
+                <label for="numero">Numero</label>
+                <input name="numero">
+            </div>
+            <div>
+                <label for="numero2">Numero2</label>
+                <input name="numero2">
+                <button type="submit" class="btn btn-primary btn-salvar">Submit</button>
+            </div>
+        </form>        
+    </body>
+</html>
