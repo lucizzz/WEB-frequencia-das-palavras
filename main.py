@@ -6,27 +6,21 @@ def frequencia(texto, palavra):
     lista_texto = texto.split()
     # lista_palavra = palavra.split()
     cont = 0
-
     for i in lista_texto:
         if palavra == i:
             cont+=1
-    
     return cont
-
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('lista.html', titulo='aaa')
-
-@app.route('/calcular', methods=['POST',])
-def calcular():
-    texto = request.form['texto']
-    palavra = request.form['palavra']
-    res = frequencia(texto, palavra)
-    return render_template('lista.html', novo = res)
-
-
-
+    if request.method == 'POST':
+        texto = request.form['texto']
+        palavra = request.form['palavra']
+        res = frequencia(texto, palavra)
+        return render_template('lista.html', novo = res)
+    else:
+        return render_template('lista.html')
+        
 app.run(debug=True)
