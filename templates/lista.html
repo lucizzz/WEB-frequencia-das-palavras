@@ -2,21 +2,22 @@
 <html lang='pt-br'>
     <head>
         <meta charset="UTF-8">
-        <title>{{ titulo }}</title>
-        <link rel="stylesheet" href="../static/bootstrap">
+        <title>Frequência</title>
+        <link rel="stylesheet" href="../static/style.css">
     </head>
     <body>
-        <h1>{{ aa }}</h1>
-        <form action="/criar" method="post">
-            <div>
-                <label for="numero">Numero</label>
-                <input name="numero">
-            </div>
-            <div>
-                <label for="numero2">Numero2</label>
-                <input name="numero2">
-                <button type="submit" class="btn btn-primary btn-salvar">Submit</button>
-            </div>
-        </form>        
+        <div>
+            <h1>Frequência das palavra</h1>
+            <form action="/calcular" method="POST">
+                <textarea name="texto" class="caixa" placeholder="Texto..."></textarea>
+                <input name="palavra" type="text" placeholder="Palavra">
+                <div class="botoes">
+                    <button type="submit" class="btn_1">Submit</button>  
+                    <button type="reset" class="btn_1"> Reset </button>
+                </div>
+            </form>
+            <textarea disabled class="caixa_resposta">{{ novo }}</textarea>     
+            
+        </div> 
     </body>
 </html>
