@@ -7,13 +7,13 @@
     </head>
     <body>
         <div>
-            <h1>Frequência das palavra</h1>
+            <h1>Frequencia das palavra</h1>
             <form action="/calcular" method="POST">
                 <textarea name="texto" class="caixa" placeholder="Texto..."></textarea>
-                <input name="palavra" type="text" placeholder="Palavra">
+                <input name="palavra" type="text" placeholder="Palavra" class="in1">
                 <div class="botoes">
                     <button type="submit" class="btn_1">Submit</button>  
-                    <button type="reset" class="btn_1"> Reset </button>
+                    <input type="submit" value="Reset" name="action2" class="btn_1">
                 </div>
             </form>
             <textarea disabled class="caixa_resposta">{{ novo }}</textarea>     
