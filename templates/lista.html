@@ -9,11 +9,11 @@
         <div>
             <h1>Frequencia das palavra</h1>
             <form action="/" method="POST">
-                <textarea name="texto" class="caixa" placeholder="Texto..."></textarea>
+                <textarea name="texto" class="caixa" placeholder="Texto...">{{ txt }}</textarea>
                 <input name="palavra" type="text" placeholder="Palavra" class="in1">
                 <div class="botoes">
                     <button type="submit" class="btn_1">Submit</button>  
-                    <input type="submit" value="Reset" name="action2" class="btn_1">
+                    <input type="submit" value="VALUE1" name="action1">
                 </div>
             </form>
             <textarea disabled class="caixa_resposta">{{ novo }}</textarea>     

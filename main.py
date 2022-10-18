@@ -1,4 +1,3 @@
-# test
 from flask import Flask
 from flask import Flask, render_template, request
 
@@ -19,7 +18,9 @@ def index():
         texto = request.form['texto']
         palavra = request.form['palavra']
         res = frequencia(texto, palavra)
-        return render_template('lista.html', novo = res)
+        if request.form.get('action1') == 'VALUE1':
+            texto =''
+        return render_template('lista.html', novo = res, txt = texto)
     else:
         return render_template('lista.html')
         
